@@ -1,0 +1,29 @@
+{
+    "list": [
+        {
+            "id": 0,
+            "name": "LP COUNT",
+            "command" : "lpcountdown"
+        },
+        {
+            "id": 1,
+            "name": "LP ZERO",
+            "command" : "lpcountzero"
+        },
+        {
+            "id": 2,
+            "name": "SUMMON",
+            "command" : "summon"
+        },
+        {
+            "id": 3,
+            "name": "DRAW",
+            "command" : "draw"
+        },
+        {
+            "id": 4,
+            "name": "NICE CARD",
+            "command" : "nicecard"
+        }
+    ]
+}
