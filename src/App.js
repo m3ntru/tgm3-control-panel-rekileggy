@@ -4,6 +4,8 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import tmi from 'tmi.js'
 import soundJson from './sound.json'
+import BT1 from './img/b1.png'
+import ImgList from './ImgList';
 import './App.css';
 
 const paramsId = new URLSearchParams(window.location.search).get("id");
@@ -25,7 +27,7 @@ const client = new tmi.Client({
 const tgm3Theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#009688',
+      main: '#888888',
     },
     secondary: {
       main: '#ff1744',
@@ -99,31 +101,39 @@ class App extends Component {
         <div className="App">
           <div style={{ padding: '7px 0px' }}>
             <Container style={{ margin: '7px auto', padding: '15px' }}>
-              <Grid container spacing={4}>
+              <Grid container spacing={2}>
                 <Grid item xs={12}>
-                  <Container style={{ backgroundColor: '#e0f2f1', padding: '15px', height: '200px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >
-                    <Typography variant='subtitle2' component='p' style={{ color: '#008076' }}>
-                      音效區
+                  <Container className="grid-container"  >
+                    <Typography variant='subtitle2' component='p' className='block-title'>
+                      Sound FX
                     </Typography>
-                    <div>
-                    {soundJson.list.map((data, index) => (
-                      <Button
-                        variant='contained'
-                        color="primary"
-                        style={{ margin: '10px 10px' }}
-                        onClick={this.handleClick("!sound " + data.command)}
-                      >{data.name}</Button>
-                    ))}
+                    <div style={{ display: 'inline-block' }}>
+                      {soundJson.list.map((data, index) => (
+                        // <Button
+                        //   variant='contained'
+                        //   color="primary"
+                        //   style={{ margin: '10px 10px' }}
+                        //   onClick={this.handleClick("!sound " + data.command)}
+                        // >{data.name}</Button>
+                        <div style={{ display: 'inline-block', justifyContent: 'center', margin: '5px 5px' }}>
+                          <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={this.handleClick("!sound " + data.command)}>
+                            {/* {data.name} */}
+                            <div className="jb-button-img" >
+                              <img src={ImgList[data.command]} alt='logo' />
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </Container>
                 </Grid>
-                <Grid item xs={8}>
-                  <Container style={{ backgroundColor: '#e0f2f1', padding: '15px', height: '200px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >
-                    <Typography variant='subtitle2' component='p' style={{ color: '#008076' }}>
-                      通知測試
+                <Grid item xs={9}>
+                  <Container className="grid-container"  >
+                    <Typography variant='subtitle2' component='p' className='block-title'>
+                      Alert Test
                     </Typography>
-                    <div>
-                      <Button
+                    <div style={{ display: 'inline-block' }}>
+                    {/* <Button
                         variant='contained'
                         color="primary"
                         style={{ margin: '10px 10px' }}
@@ -146,13 +156,41 @@ class App extends Component {
                         color="primary"
                         style={{ margin: '10px 10px' }}
                         onClick={this.handleClick("!尊爵不凡")}
-                      >Tier3</Button>
+                      >Tier3</Button> */}
+                      <div style={{ display: 'inline-block', justifyContent: 'center', margin: '5px 5px' }}>
+                        <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={this.handleClick("!彩學好帥")}>
+                          <div className="jb-button-img" >
+                            <img src={ImgList['cheer']} alt='logo' />
+                          </div>
+                        </div>
+                      </div>
+                      <div style={{ display: 'inline-block', justifyContent: 'center', margin: '5px 5px' }}>
+                        <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={this.handleClick("!小狗><")}>
+                          <div className="jb-button-img" >
+                            <img src={ImgList['donate']} alt='logo' />
+                          </div>
+                        </div>
+                      </div>
+                      <div style={{ display: 'inline-block', justifyContent: 'center', margin: '5px 5px' }}>
+                        <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={this.handleClick("!戴口罩勤洗手要消毒")}>
+                          <div className="jb-button-img" >
+                            <img src={ImgList['sub1']} alt='logo' />
+                          </div>
+                        </div>
+                      </div>
+                      <div style={{ display: 'inline-block', justifyContent: 'center', margin: '5px 5px' }}>
+                        <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={this.handleClick("!尊爵不凡")}>
+                          <div className="jb-button-img" >
+                            <img src={ImgList['sub3']} alt='logo' />
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </Container>
                 </Grid>
-                <Grid item xs={4}>
-                  <Container style={{ backgroundColor: '#e0f2f1', padding: '15px', height: '200px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >
-                    <Typography variant='subtitle2' component='p' style={{ color: '#008076' }}>
+                <Grid item xs={3}>
+                  <Container className="grid-container"  >
+                    <Typography variant='subtitle2' component='p' className='block-title'>
                       Basilisk Time
                     </Typography>
                     <div>
@@ -171,9 +209,9 @@ class App extends Component {
                   </Container>
                 </Grid>
                 <Grid item xs={12}>
-                  <Container style={{ backgroundColor: '#e0f2f1', padding: '15px' }} >
-                    <Typography variant='subtitle2' component='p' style={{ color: '#008076' }}>
-                      手動 Recall
+                  <Container className="grid-container" >
+                    <Typography variant='subtitle2' component='p' className='block-title'>
+                      Recall
                     </Typography>
                     <TextField component={Paper}
                       label="Twitch id"
@@ -216,12 +254,16 @@ class App extends Component {
                   </Container>
                 </Grid>
                 <Grid item xs={4}>
-                  <Container style={{ backgroundColor: '#e0f2f1', padding: '15px', height: '200px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >
-                    <img src='https://cdn.discordapp.com/emojis/809889506089893888.png?v=1' alt='logo' />
+                  <Container className="grid-container"  >
+                    <div className="jb-button">
+                      <div className="jb-button-img" >
+                        <img src='https://static-cdn.jtvnw.net/emoticons/v2/78084/default/dark/4.0' alt='logo' />
+                      </div>
+                    </div>
                   </Container>
                 </Grid>
                 <Grid item xs={4}>
-                  <Container style={{ backgroundColor: '#e0f2f1', padding: '15px', height: '200px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >
+                  <Container className="grid-container"  >
                     <Button
                       variant='contained'
                       color="secondary"
@@ -231,13 +273,17 @@ class App extends Component {
                   </Container>
                 </Grid>
                 <Grid item xs={4}>
-                  <Container style={{ backgroundColor: '#e0f2f1', padding: '15px', height: '200px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >
-                    <img src='https://cdn.discordapp.com/emojis/809889506089893888.png?v=1' alt='logo' />
+                  <Container className="grid-container"  >
+                    <div className="jb-button">
+                      <div className="jb-button-img" >
+                        <img src='https://static-cdn.jtvnw.net/emoticons/v2/78084/default/dark/4.0' alt='logo' />
+                      </div>
+                    </div>
                   </Container>
                 </Grid>
               </Grid>
             </Container>
-
+            <img src={BT1} alt='logo' style={{ display: 'none' }} />            
           </div>
         </div>
       </MuiThemeProvider>

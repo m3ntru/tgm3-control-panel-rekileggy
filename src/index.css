@@ -1,10 +1,10 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Noto Sans CJK TC DemiLight', sans-serif !important;
+  font-family: 'Noto Sans CJK TC', sans-serif !important;
   font-size: calc(0.75em + 1vmin);
   height: 100%;
-  background-color: #6caba5;
+  background-color: #252526;
 }
 
 

@@ -23,11 +23,49 @@
 }
 
 .grid-container{
-  background-color: '#e0f2f1'; 
-  padding: '15px'; 
-  height: '200px'; 
-  display: 'flex'; 
-  flex-direction: 'column'; 
-  align-items: 'center'; 
-  justify-content: 'center' 
+  background-color: #3b3b3c; 
+  padding: 15px; 
+  min-height: 220px; 
+  display: flex!important; 
+  justify-content: center!important;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.block-title{
+  color: #c9d1d9
+}
+
+.jb-button{
+  font-size: 15px;
+  height: 120px; 
+  width: 120px;
+  flex-direction: column; 
+  align-items: center; 
+  background-image: url("./img/b0.png");
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+}
+
+.jb-button:active{
+  background-image: url("./img/b1.png")
+}
+
+.jb-button-img{
+  height: 120px; 
+  width: 120px;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  opacity: 0.5;
+}
+
+.jb-button-img:active{
+  opacity: 0.75;
+}
+.jb-button-img img{
+  height: 85px;
+  max-width: 100px;
 }
