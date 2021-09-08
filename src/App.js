@@ -108,7 +108,25 @@ class App extends Component {
                       Sound FX
                     </Typography>
                     <div style={{ display: 'inline-block' }}>
-                      {soundJson.list.map((data, index) => (
+                      {soundJson.yugiohList.map((data, index) => (
+                        // <Button
+                        //   variant='contained'
+                        //   color="primary"
+                        //   style={{ margin: '10px 10px' }}
+                        //   onClick={this.handleClick("!sound " + data.command)}
+                        // >{data.name}</Button>
+                        <div style={{ display: 'inline-block', justifyContent: 'center', margin: '5px 5px' }}>
+                          <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={this.handleClick("!sound " + data.command)}>
+                            {/* {data.name} */}
+                            <div className="jb-button-img" >
+                              <img src={ImgList[data.command]} alt='logo' />
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div style={{ display: 'inline-block' }}>
+                      {soundJson.metalSlugList.map((data, index) => (
                         // <Button
                         //   variant='contained'
                         //   color="primary"

@@ -1,5 +1,5 @@
 {
-    "list": [
+    "yugiohList": [
         {
             "id": 0,
             "name": "LP COUNT",
@@ -24,6 +24,38 @@
             "id": 4,
             "name": "NICE CARD",
             "command" : "nicecard"
+        },
+        {
+            "id": 5,
+            "name": "Commercial",
+            "command" : "commercial"
+        }
+    ],
+    "metalSlugList": [
+        {
+            "id": 6,
+            "name": "OK",
+            "command" : "ok"
+        },
+        {
+            "id": 7,
+            "name": "HEAVY MACHINEGUN",
+            "command" : "heavy"
+        },
+        {
+            "id": 8,
+            "name": "SHOTGUN",
+            "command" : "shotgun"
+        },
+        {
+            "id": 9,
+            "name": "ENEMYCHASER",
+            "command" : "enemychaser"
+        },
+        {
+            "id": 10,
+            "name": "STONE",
+            "command" : "stone"
         }
     ]
 }
