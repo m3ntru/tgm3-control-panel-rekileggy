@@ -1,61 +1,142 @@
-{
-    "yugiohList": [
-        {
-            "id": 0,
-            "name": "LP COUNT",
-            "command" : "lpcountdown"
-        },
-        {
-            "id": 1,
-            "name": "LP ZERO",
-            "command" : "lpcountzero"
-        },
-        {
-            "id": 2,
-            "name": "SUMMON",
-            "command" : "summon"
-        },
-        {
-            "id": 3,
-            "name": "DRAW",
-            "command" : "draw"
-        },
-        {
-            "id": 4,
-            "name": "NICE CARD",
-            "command" : "nicecard"
-        },
-        {
-            "id": 5,
-            "name": "Commercial",
-            "command" : "commercial"
-        }
-    ],
-    "metalSlugList": [
-        {
-            "id": 6,
-            "name": "OK",
-            "command" : "ok"
-        },
-        {
-            "id": 7,
-            "name": "HEAVY MACHINEGUN",
-            "command" : "heavy"
-        },
-        {
-            "id": 8,
-            "name": "SHOTGUN",
-            "command" : "shotgun"
-        },
-        {
-            "id": 9,
-            "name": "ENEMYCHASER",
-            "command" : "enemychaser"
-        },
-        {
-            "id": 10,
-            "name": "STONE",
-            "command" : "stone"
-        }
-    ]
-}
+[
+    {
+        "name": "Yu-Gi-Oh",
+        "list": [
+            {
+                "name": "LP Count",
+                "command" : "lpcountdown"
+            },
+            {
+                "name": "LP Zero",
+                "command" : "lpcountzero"
+            },
+            {
+                "name": "Summon",
+                "command" : "summon"
+            },
+            {
+                "name": "Destroy",
+                "command" : "destroy"
+            },
+            {
+                "name": "Draw",
+                "command" : "draw"
+            },
+            {
+                "name": "いいカードだ",
+                "command" : "nicecard"
+            },
+            {
+                "name": "CM",
+                "command" : "commercial"
+            },
+            {
+                "name": "甘いぞ遊戯",
+                "command" : "amaizo"
+            },
+            {
+                "name": "爆☆殺",
+                "command" : "bakusatsu"
+            },
+            {
+                "name": "HA☆NA☆SE",
+                "command" : "hanase"
+            },
+            {
+                "name": "何これぇ!?",
+                "command" : "nanikore"
+            },
+            {
+                "name": "ウワァァァァァ",
+                "command" : "uwaaaa"
+            },
+            {
+                "name": "ふつくしい",
+                "command" : "futsukushii"
+            }             
+        ]
+    },
+    {
+        "name": "Metal Slug",
+        "list": [
+            {
+                "name": "OK",
+                "command" : "ok"
+            },
+            {
+                "name": "Heavy Machinegun",
+                "command" : "heavy"
+            },
+            {
+                "name": "Shotgun",
+                "command" : "shotgun"
+            },
+            {
+                "name": "Enemy Chaser",
+                "command" : "enemychaser"
+            },
+            {
+                "name": "Stone",
+                "command" : "stone"
+            }
+        ]
+    },
+    {
+        "name": "Ace Attorney",
+        "tag": "AceAttorney",
+        "multi": true,
+        "list": [
+            {
+                "name": "Chinese",
+                "list": [
+                    {
+                        "name": "Hold It - Chinese",
+                        "command" : "holditc"
+                    },
+                    {
+                        "name": "Objection - Chinese",
+                        "command" : "objectionc"
+                    },
+                    {
+                        "name": "Take That - Chinese",
+                        "command" : "takethatc"
+                    }
+                ]
+            },
+            {
+                "name": "Japanese",
+                "list": [
+                    {
+                        "name": "Hold It - Japanese",
+                        "command" : "holditj"
+                    },
+                    {
+                        "name": "Objection - Japanese",
+                        "command" : "objectionj"
+                    },
+                    {
+                        "name": "Take That - Japanese",
+                        "command" : "takethatj"
+                    }
+                ]
+            },
+            {
+                "name": "English",
+                "list": [
+                    {
+                        "name": "Hold It - English",
+                        "command" : "holdite"
+                    },
+                    {
+                        "name": "Objection - English",
+                        "command" : "objectione"
+                    },
+                    {
+                        "name": "Take That - English",
+                        "command" : "takethate"
+                    }
+                ]
+            }
+        ]
+    }
+]

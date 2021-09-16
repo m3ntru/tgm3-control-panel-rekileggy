@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Container, Grid, Typography, Button, TextField, Paper } from '@material-ui/core/';
+import { Container, Grid, Typography, Button, TextField, Paper, Tooltip } from '@material-ui/core/';
 import BT1 from './img/b1.png'
 import ImgList from './ImgList';
+import Basilisk from './img/basilisktime.png';
 import './App.css';
 
 export const AlertPanel = (props) => {
@@ -88,9 +89,7 @@ export const AlertPanel = (props) => {
                         </Grid>
                         <Grid item xs={3}>
                             <Container className="grid-container"  >
-                                <Typography variant='subtitle2' component='p' className='block-title'>
-                                    Basilisk Time
-                                </Typography>
+                            <img src={Basilisk} alt='logo' style={{height: "80px"}} />
                                 <div>
                                     <Button
                                         variant='contained'
