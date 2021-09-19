@@ -31,6 +31,10 @@
                 "command" : "commercial"
             },
             {
+                "name": "次回予告",
+                "command" : "jikaiyokoku"
+            },     
+            {
                 "name": "甘いぞ遊戯",
                 "command" : "amaizo"
             },
@@ -43,17 +47,10 @@
                 "command" : "hanase"
             },
             {
-                "name": "何これぇ!?",
-                "command" : "nanikore"
-            },
-            {
-                "name": "ウワァァァァァ",
-                "command" : "uwaaaa"
-            },
-            {
-                "name": "ふつくしい",
-                "command" : "futsukushii"
-            }             
+                "name": "全速前進DA☆",
+                "command" : "zensoku"
+            }   
+                     
         ]
     },
     {
@@ -74,6 +71,22 @@
             {
                 "name": "Enemy Chaser",
                 "command" : "enemychaser"
+            },
+            {
+                "name": "Flame Shot",
+                "command" : "flameshot"
+            },
+            {
+                "name": "Laser Gun",
+                "command" : "lasergun"
+            },
+            {
+                "name": "Rocket Launcher",
+                "command" : "rocketlauncher"
+            },
+            {
+                "name": "Zantetsu Sword",
+                "command" : "zantetsusword"
             },
             {
                 "name": "Stone",

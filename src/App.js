@@ -33,7 +33,7 @@ const tgm3Theme = createTheme ({
       main: '#888888',
     },
     secondary: {
-      main: '#ff1744',
+      main: '#ff0000',
     },
   },
   typography: {

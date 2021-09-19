@@ -10,17 +10,23 @@ import destroy from './img/YuGiOh/destroy.png';
 import draw from './img/YuGiOh/draw.jpg';
 import niceCard from './img/YuGiOh/nicecard.jpg';
 import commercial from './img/YuGiOh/commercial.jpg';
+import jikaiyokoku from './img/YuGiOh/jikaiyokoku.jpg';
 import bakusatsu from './img/YuGiOh/bakusatsu.png';
 import amaizo from './img/YuGiOh/amaizo.jpg';
 import hanase from './img/YuGiOh/hanase.jpg';
 import nanikore from './img/YuGiOh/nanikore.jpg';
 import uwaaaa from './img/YuGiOh/uwaaaa.png';
 import futsukushii from './img/YuGiOh/futsukushii.png';
+import zensoku from './img/YuGiOh/zensoku.jpg';
 //MetalSlug
 import ok from './img/MetalSlug/ok.gif';
 import heavy from './img/MetalSlug/heavy.gif';
 import shotgun from './img/MetalSlug/shotgun.gif';
 import enemychaser from './img/MetalSlug/enemychaser.gif';
+import flameshot from './img/MetalSlug/flameshot.gif';
+import lasergun from './img/MetalSlug/lasergun.gif';
+import rocketlauncher from './img/MetalSlug/rocketlauncher.gif';
+import zantetsusword from './img/MetalSlug/zantetsusword.gif';
 import stone from './img/MetalSlug/stone.gif';
 //AceAttorney
 import holditC from './img/AceAttorney/holditc.png';
@@ -47,17 +53,23 @@ export default {
     "draw": draw,
     "nicecard": niceCard,
     "commercial": commercial,
+    "jikaiyokoku": jikaiyokoku,
     "amaizo": amaizo,
     "bakusatsu": bakusatsu,
     "hanase": hanase,
     "nanikore": nanikore,
     "uwaaaa": uwaaaa,
     "futsukushii": futsukushii,
+    "zensoku": zensoku,
     //MetalSlug
     "ok": ok,
     "heavy": heavy,
     "shotgun": shotgun,
-    "enemychaser": enemychaser,
+    "enemychaser": enemychaser, 
+    "flameshot": flameshot,
+    "lasergun": lasergun,
+    "rocketlauncher": rocketlauncher,
+    "zantetsusword": zantetsusword,
     "stone": stone,
     //AceAttorney
     "holditc": holditC,
