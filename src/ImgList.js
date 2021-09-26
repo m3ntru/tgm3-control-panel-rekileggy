@@ -2,6 +2,8 @@ import cheer from './img/cheer.gif';
 import donate from './img/donate.gif';
 import sub1 from './img/sub1.png';
 import sub3 from './img/sub3.png';
+import subg1 from './img/subg1.png';
+import subg3 from './img/subg3.png';
 //YuGiOh
 import lpcountdown from './img/YuGiOh/lpcountdown.jpg';
 import lpcountzero from './img/YuGiOh/lpcountzero.jpg';
@@ -45,6 +47,8 @@ export default {
     "donate": donate,
     "sub1": sub1,
     "sub3": sub3,
+    "subg1": subg1,
+    "subg3": subg3,
     //YuGiOh
     "lpcountdown": lpcountdown,
     "lpcountzero": lpcountzero,
