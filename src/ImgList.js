@@ -40,6 +40,28 @@ import objectionJ from './img/AceAttorney/objectionj.png';
 import takethatC from './img/AceAttorney/takethatc.png';
 import takethatE from './img/AceAttorney/takethate.png';
 import takethatJ from './img/AceAttorney/takethatj.png';
+//JoJo
+import caesar from './img/Jojo/caesar.jpg';
+import dai3bukan from './img/Jojo/dai3bukan.jpg';
+import goodbyejojo from './img/Jojo/goodbyejojo.jpg';
+import hell2you from './img/Jojo/hell2you.jpg';
+import konodioda from './img/Jojo/konodioda.jpg';
+import nigerundayo from './img/Jojo/nigerundayo.jpg';
+import ningenoyameruzo from './img/Jojo/ningenoyameruzo.jpg';
+import nonononono from './img/Jojo/nonononono.png';
+import roadroller from './img/Jojo/roadroller.jpg';
+import shinekakyoin from './img/Jojo/shinekakyoin.png';
+import tobecontinued from './img/Jojo/tobecontinued.png';
+import verynicecaesarchan from './img/Jojo/verynicecaesarchan.jpg';
+import wryyy from './img/Jojo/wryyy.jpg';
+import yareyaredaze from './img/Jojo/yareyaredaze.jpg';
+import yesiam from './img/Jojo/yesiam.jpg';
+import yesyesyes from './img/Jojo/yesyesyes.jpg';
+import zawaruda from './img/Jojo/zawaruda.jpg';
+
+
+
+
 
 
 export default {
@@ -69,7 +91,7 @@ export default {
     "ok": ok,
     "heavy": heavy,
     "shotgun": shotgun,
-    "enemychaser": enemychaser, 
+    "enemychaser": enemychaser,
     "flameshot": flameshot,
     "lasergun": lasergun,
     "rocketlauncher": rocketlauncher,
@@ -85,4 +107,22 @@ export default {
     "takethatc": takethatC,
     "takethate": takethatE,
     "takethatj": takethatJ,
+    //JoJo
+    "caesar": caesar,
+    "dai3bukan": dai3bukan,
+    "goodbyejojo": goodbyejojo,
+    "hell2you": hell2you,
+    "konodioda": konodioda,
+    "nigerundayo": nigerundayo,
+    "ningenoyameruzo": ningenoyameruzo,
+    "nonononono": nonononono,
+    "roadroller": roadroller,
+    "shinekakyoin": shinekakyoin,
+    "tobecontinued": tobecontinued,
+    "verynicecaesarchan": verynicecaesarchan,
+    "wryyy": wryyy,
+    "yareyaredaze": yareyaredaze,
+    "yesiam": yesiam,
+    "yesyesyes": yesyesyes,
+    "zawaruda": zawaruda,
 };

@@ -151,5 +151,78 @@
                 ]
             }
         ]
+    },
+    {
+        "name": "JoJo's Bizarre Adventure",
+        "list": [
+            {
+                "name": "YES YES YES YES YES",
+                "command" : "yesyesyes"
+            },
+            {
+                "name": "No No No No No",
+                "command" : "nonononono"
+            },
+            {
+                "name": "C-aesar!",
+                "command" : "caesar"
+            },
+            {
+                "name": "勝ったッ!第3部完!",
+                "command" : "dai3bukan"
+            },
+            {
+                "name": "Goodbye JoJo",
+                "command" : "goodbyejojo"
+            },
+            {
+                "name": "Hell 2 You",
+                "command" : "hell2you"
+            },
+            {
+                "name": "この Dio だ",
+                "command" : "konodioda"
+            },
+            {
+                "name": "逃げるんだよ",
+                "command" : "nigerundayo"
+            },
+            {
+                "name": "おれは人間をやめるぞ！JoJo！",
+                "command" : "ningenoyameruzo"
+            },
+            {
+                "name": "ロードローラーだッ！",
+                "command" : "roadroller"
+            },
+            {
+                "name": "死ね！花京院！",
+                "command" : "shinekakyoin"
+            },
+            {
+                "name": "To Be Continued",
+                "command" : "tobecontinued"
+            },
+            {
+                "name": "Very Nice Caesar-Chan",
+                "command" : "verynicecaesarchan"
+            },
+            {
+                "name": "Wryyyyyyyyyyy!",
+                "command" : "wryyy"
+            },
+            {
+                "name": "やれやれだぜ",
+                "command" : "yareyaredaze"
+            },
+            {
+                "name": "Yes I am",
+                "command" : "yesiam"
+            },
+            {
+                "name": "ザ・ワールド！",
+                "command" : "zawaruda"
+            }
+        ]
     }
 ]
