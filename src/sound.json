@@ -164,6 +164,35 @@
                 "command" : "nonononono"
             },
             {
+                "name": "To Be Continued",
+                "command" : "tobecontinued"
+            },  
+            {
+                "name": "Wryyyyyyyyyyy!",
+                "command" : "wryyy"
+            },
+            {
+                "name": "やれやれだぜ",
+                "command" : "yareyaredaze"
+            },
+            {
+                "name": "Yes I am",
+                "command" : "yesiam"
+            },
+            {
+                "name": "ザ・ワールド！",
+                "command" : "zawarudo"
+            }
+        ]
+    },
+    {
+        "name": "JoJo's Bizarre Adventure (Backup)",
+        "list": [
+            {
+                "name": "Very Nice Caesar-Chan",
+                "command" : "verynicecaesarchan"
+            },
+            {
                 "name": "C-aesar!",
                 "command" : "caesar"
             },
@@ -198,30 +227,6 @@
             {
                 "name": "死ね！花京院！",
                 "command" : "shinekakyoin"
-            },
-            {
-                "name": "To Be Continued",
-                "command" : "tobecontinued"
-            },
-            {
-                "name": "Very Nice Caesar-Chan",
-                "command" : "verynicecaesarchan"
-            },
-            {
-                "name": "Wryyyyyyyyyyy!",
-                "command" : "wryyy"
-            },
-            {
-                "name": "やれやれだぜ",
-                "command" : "yareyaredaze"
-            },
-            {
-                "name": "Yes I am",
-                "command" : "yesiam"
-            },
-            {
-                "name": "ザ・ワールド！",
-                "command" : "zawaruda"
             }
         ]
     }

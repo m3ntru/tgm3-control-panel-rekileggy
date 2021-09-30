@@ -57,7 +57,7 @@ import wryyy from './img/Jojo/wryyy.jpg';
 import yareyaredaze from './img/Jojo/yareyaredaze.jpg';
 import yesiam from './img/Jojo/yesiam.jpg';
 import yesyesyes from './img/Jojo/yesyesyes.jpg';
-import zawaruda from './img/Jojo/zawaruda.jpg';
+import zawarudo from './img/Jojo/zawarudo.jpg';
 
 
 
@@ -124,5 +124,5 @@ export default {
     "yareyaredaze": yareyaredaze,
     "yesiam": yesiam,
     "yesyesyes": yesyesyes,
-    "zawaruda": zawaruda,
+    "zawarudo": zawarudo,
 };
