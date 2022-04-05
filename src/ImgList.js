@@ -58,6 +58,9 @@ import yareyaredaze from './img/Jojo/yareyaredaze.jpg';
 import yesiam from './img/Jojo/yesiam.jpg';
 import yesyesyes from './img/Jojo/yesyesyes.jpg';
 import zawarudo from './img/Jojo/zawarudo.jpg';
+//Bonk
+import bonksd from './img/bonksd.png';
+import bonkhd from './img/bonkhd.png';
 
 
 
@@ -125,4 +128,7 @@ export default {
     "yesiam": yesiam,
     "yesyesyes": yesyesyes,
     "zawarudo": zawarudo,
+    //Bonk
+    "bonksd": bonksd,
+    "bonkhd": bonkhd,
 };

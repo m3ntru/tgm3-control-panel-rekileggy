@@ -6,8 +6,15 @@
 
 ## 版本
 
-### version 0.3.1
-- 新增 AlertBox 控制功能 (Sub Gift Alert Test, Sub Gift Boost Mode 開關)
+### version 0.3.3
+- 新增 Lang 切換
+
+### version 0.3.2.1
+- 音效音量修改
+- 音效清單變更
+
+### version 0.3.2
+- 新增音效
 
 ### version 0.3.1 beta2
 - 新增音效

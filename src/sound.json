@@ -54,7 +54,7 @@
         ]
     },
     {
-        "name": "Metal Slug",
+        "name": "Metal Slug + Bonk",
         "list": [
             {
                 "name": "OK",
@@ -91,6 +91,14 @@
             {
                 "name": "Stone",
                 "command" : "stone"
+            },
+            {
+                "name": "Bonk SD",
+                "command" : "bonksd"
+            },
+            {
+                "name": "Bonk HD",
+                "command" : "bonkhd"
             }
         ]
     },

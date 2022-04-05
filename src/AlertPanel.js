@@ -193,7 +193,24 @@ export const AlertPanel = (props) => {
                                         </div>
                                     </Container>
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={6}>
+                                    <Container className="grid-container"  >
+                                        <div>
+                                            <Button
+                                                variant='contained'
+                                                color="primary"
+                                                style={{ margin: '10px 10px' }}
+                                                onClick={handleClick("!lang on")}
+                                            >🌎</Button>
+                                            <Button
+                                                variant='contained'
+                                                style={{ margin: '10px 10px' }}
+                                                onClick={handleClick("!lang off")}
+                                            >OFF</Button>
+                                        </div>
+                                    </Container>
+                                </Grid>
+                                <Grid item xs={6}>
                                     <Container className="grid-container"  >
                                         <Switch
                                             color="default"
