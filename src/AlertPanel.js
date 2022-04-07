@@ -1,20 +1,63 @@
-import React, { useState } from 'react';
-import { Container, Grid, Typography, Button, TextField, Paper, Tooltip, Switch } from '@material-ui/core/';
+import React, { useState, useEffect } from 'react';
+import { Container, Grid, Typography, Button, TextField, Paper, Tooltip, Switch, FormControl, Select, MenuItem } from '@material-ui/core/';
 import BT1 from './img/b1.png'
 import ImgList from './ImgList';
-import Basilisk from './img/basilisktime.png';
-import Gift from './img/gift.png';
+import BasiliskImg from './img/basilisktime.png';
+import GiftImg from './img/gift.png';
 import './App.css';
 
 export const AlertPanel = (props) => {
     const [id, setId] = useState("");
     const [text, setText] = useState("");
     const [reload, setReload] = useState(true);
+    const [basilisk, setBasilisk] = useState(false);
+    const [giftboost, setGiftboost] = useState(false);
+    const [lang, setLang] = useState("ch");
+    const ln = ["ch", "en", "tw", "jp", "fr", "ko"];
 
-    const handleClick = name => event => {
+    useEffect(() => {
+        getSetting();
+    }, []);
+    
+    const getSetting = async () => {
+        await fetch('https://m3ntru-tts.herokuapp.com/api/alert/tetristhegrandmaster3')
+        .then(response=>{
+          return response.json();
+        })
+        .then(data=>{
+          setBasilisk(data.basilisk);
+          setGiftboost(data.gift);
+          setLang(data.lang);
+        })
+        .catch(error => console.error(error))
+    };
+
+    const setSetting = async (key, value) => {
+        let headers = {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+        let settingBody = {"twitch": "tetristhegrandmaster3"};
+        settingBody[key] = value;
+        await fetch('https://m3ntru-tts.herokuapp.com/api/alert/',{method: "POST", headers, body: JSON.stringify(settingBody)})
+        .then(response=>{
+          return response.json();
+        })
+        .then(data=>{
+          console.log(data);
+        })
+        .catch(error => console.error(error))
+    };
+    
+    const handleCommonClick = name => event => {
         const { client, channel } = props;
         client.say(channel, name);
     };
+
+    // const handleClick = name => event => {
+    //     const { client, channel } = props;
+    //     client.say(channel, name);
+    // };
 
     const handleRecallClick = name => event => {
         const { client, channel } = props;
@@ -46,9 +89,35 @@ export const AlertPanel = (props) => {
         setText(msg);
     };
 
-    const switchChange = () => event => {
-        setReload(!event.target.checked);
+    const handleSwitchChange = (value) => event => {
+        const { client, channel } = props;
+        const status = (event.target.checked)? "on" : "off";
+        switch(value)
+        {
+            case "basilisk":
+                setBasilisk(event.target.checked);
+                client.say(channel, "!basilisktime " + status);
+                setSetting("basilisk", event.target.checked);
+                break;
+            case "giftboost":
+                setGiftboost(event.target.checked);
+                client.say(channel, "!giftboost " + status);
+                setSetting("gift", event.target.checked);
+                break;
+            case "reload":
+                setReload(!event.target.checked);
+                break;
+            default:
+                break;
+        }
     };
+
+    const handleLangChange = () => event =>  {
+        const { client, channel } = props;
+        setLang(event.target.value);
+        client.say(channel, "!lang " + event.target.value);
+        setSetting("lang", event.target.value);
+    } 
 
     return (
         <div className="App">
@@ -64,42 +133,42 @@ export const AlertPanel = (props) => {
                                         </Typography>
                                         <div style={{ display: 'inline-block' }}>
                                             <div style={{ display: 'inline-block', justifyContent: 'center', margin: '5px 5px' }}>
-                                                <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={handleClick("!彩學好帥")}>
+                                                <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={handleCommonClick("!彩學好帥")}>
                                                     <div className="jb-button-img" >
                                                         <img src={ImgList['cheer']} alt='logo' />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div style={{ display: 'inline-block', justifyContent: 'center', margin: '5px 5px' }}>
-                                                <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={handleClick("!小狗><")}>
+                                                <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={handleCommonClick("!小狗><")}>
                                                     <div className="jb-button-img" >
                                                         <img src={ImgList['donate']} alt='logo' />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div style={{ display: 'inline-block', justifyContent: 'center', margin: '5px 5px' }}>
-                                                <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={handleClick("!戴口罩勤洗手要消毒")}>
+                                                <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={handleCommonClick("!戴口罩勤洗手要消毒")}>
                                                     <div className="jb-button-img" >
                                                         <img src={ImgList['sub1']} alt='logo' />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div style={{ display: 'inline-block', justifyContent: 'center', margin: '5px 5px' }}>
-                                                <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={handleClick("!尊爵不凡")}>
+                                                <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={handleCommonClick("!尊爵不凡")}>
                                                     <div className="jb-button-img" >
                                                         <img src={ImgList['sub3']} alt='logo' />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div style={{ display: 'inline-block', justifyContent: 'center', margin: '5px 5px' }}>
-                                                <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={handleClick("!戴口罩勤洗手要消毒 g")}>
+                                                <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={handleCommonClick("!戴口罩勤洗手要消毒 g")}>
                                                     <div className="jb-button-img" >
                                                         <img src={ImgList['subg1']} alt='logo' />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div style={{ display: 'inline-block', justifyContent: 'center', margin: '5px 5px' }}>
-                                                <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={handleClick("!尊爵不凡 g")}>
+                                                <div className="jb-button" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={handleCommonClick("!尊爵不凡 g")}>
                                                     <div className="jb-button-img" >
                                                         <img src={ImgList['subg3']} alt='logo' />
                                                     </div>
@@ -159,69 +228,58 @@ export const AlertPanel = (props) => {
                             <Grid container spacing={2}>
                                 <Grid item xs={12}>
                                     <Container className="grid-container"  >
-                                    <img src={Basilisk} alt='logo' style={{height: "80px"}} />
-                                        <div>
-                                            <Button
-                                                variant='contained'
-                                                color="primary"
-                                                style={{ margin: '10px 10px' }}
-                                                onClick={handleClick("!basilisktime on")}
-                                            >ON</Button>
-                                            <Button
-                                                variant='contained'
-                                                style={{ margin: '10px 10px' }}
-                                                onClick={handleClick("!basilisktime off")}
-                                            >OFF</Button>
-                                        </div>
+                                        <Grid container spacing={2} className="label-switch" style={{margin: 'auto'}}>
+                                            <Grid style={{margin: 'auto'}} item xs={6}>
+                                                <img title="Basilisk" src={BasiliskImg} alt='logo' style={{height: "40px"}} />
+                                            </Grid>
+                                            <Grid item xs={6}>
+                                                <Switch checked={basilisk} onChange={handleSwitchChange('basilisk')}/>
+                                            </Grid>
+                                        </Grid>
+                                        <Grid container spacing={2} className="label-switch" style={{margin: 'auto'}}>
+                                            <Grid style={{margin: 'auto'}} item xs={6}>
+                                                <img title="Gift Boost" src={GiftImg} alt='logo' style={{height: "40px"}} />
+                                            </Grid>
+                                            <Grid item xs={6}>
+                                                <Switch checked={giftboost} onChange={handleSwitchChange('giftboost')}/>
+                                            </Grid>
+                                        </Grid>
+                                        <Grid container spacing={2} className="label-switch" style={{margin: 'auto'}}>
+                                            <Grid style={{margin: 'auto'}} item xs={6}>
+                                                🌎
+                                            </Grid>
+                                            <Grid item xs={6}>
+                                            <FormControl>
+                                                <Select
+                                                    labelId="demo-simple-select-label"
+                                                    style={{backgroundColor: "#999999", padding: "1px 8px"}}
+                                                    value={lang}
+                                                    onChange={handleLangChange()}
+                                                >
+                                                    {ln.map((data, index) => (
+                                                        <MenuItem key={data} value={data}>{data}</MenuItem>
+                                                    ))}
+                                                    <MenuItem key={"random"} value={"random"}>{"random"}</MenuItem>
+                                                </Select>
+                                            </FormControl>
+                                            </Grid>
+                                        </Grid>
                                     </Container>
                                 </Grid>
+                                
+                                
                                 <Grid item xs={12}>
-                                    <Container className="grid-container"  >
-                                    <img src={Gift} alt='logo' style={{height: "80px"}} />
-                                        <div>
-                                            <Button
-                                                variant='contained'
-                                                color="primary"
-                                                style={{ margin: '10px 10px' }}
-                                                onClick={handleClick("!giftboost on")}
-                                            >ON</Button>
-                                            <Button
-                                                variant='contained'
-                                                style={{ margin: '10px 10px' }}
-                                                onClick={handleClick("!giftboost off")}
-                                            >OFF</Button>
-                                        </div>
-                                    </Container>
-                                </Grid>
-                                <Grid item xs={6}>
-                                    <Container className="grid-container"  >
-                                        <div>
-                                            <Button
-                                                variant='contained'
-                                                color="primary"
-                                                style={{ margin: '10px 10px' }}
-                                                onClick={handleClick("!lang on")}
-                                            >🌎</Button>
-                                            <Button
-                                                variant='contained'
-                                                style={{ margin: '10px 10px' }}
-                                                onClick={handleClick("!lang off")}
-                                            >OFF</Button>
-                                        </div>
-                                    </Container>
-                                </Grid>
-                                <Grid item xs={6}>
                                     <Container className="grid-container"  >
                                         <Switch
                                             color="default"
-                                            onChange={switchChange()}
+                                            onChange={handleSwitchChange('reload')}
                                         />
                                         <Button
                                             disabled={reload}
                                             variant='contained'
                                             color="secondary"
                                             style={{ margin: '10px 10px' }}
-                                            onClick={handleClick("!reload2.0")}
+                                            onClick={handleCommonClick("!reload2.0")}
                                         >ALERTBOX Reload</Button>
                                     </Container>
                                 </Grid>

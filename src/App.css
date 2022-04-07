@@ -70,3 +70,7 @@
   height: 70px;
   max-width: 75px;
 }
+
+.label-switch{
+  display: inline-block;
+}
