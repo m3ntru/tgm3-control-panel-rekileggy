@@ -54,7 +54,7 @@
         ]
     },
     {
-        "name": "Metal Slug + Bonk",
+        "name": "Mix",
         "list": [
             {
                 "name": "OK",
@@ -99,6 +99,10 @@
             {
                 "name": "Bonk HD",
                 "command" : "bonkhd"
+            },
+            {
+                "name": "全員OUT!",
+                "command" : "out"
             }
         ]
     },

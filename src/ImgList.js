@@ -61,6 +61,8 @@ import zawarudo from './img/Jojo/zawarudo.jpg';
 //Bonk
 import bonksd from './img/bonksd.png';
 import bonkhd from './img/bonkhd.png';
+//out
+import out from './img/out.png';
 
 
 
@@ -131,4 +133,6 @@ export default {
     //Bonk
     "bonksd": bonksd,
     "bonkhd": bonkhd,
+    //out
+    "out": out,
 };

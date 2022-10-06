@@ -12,15 +12,17 @@ export const AlertPanel = (props) => {
     const [reload, setReload] = useState(true);
     const [basilisk, setBasilisk] = useState(false);
     const [giftboost, setGiftboost] = useState(false);
+    const [source, setSource] = useState(false);
     const [lang, setLang] = useState("ch");
+    const [recall, setRecall] = useState(false);
     const ln = ["ch", "en", "tw", "jp", "fr", "ko"];
-
+    const { client, channel } = props;
     useEffect(() => {
         getSetting();
     }, []);
     
     const getSetting = async () => {
-        await fetch('https://m3ntru-tts.herokuapp.com/api/alert/tetristhegrandmaster3')
+        await fetch('https://m3ntru-api.vercel.app/api/alert/tetristhegrandmaster3')
         .then(response=>{
           return response.json();
         })
@@ -28,6 +30,7 @@ export const AlertPanel = (props) => {
           setBasilisk(data.basilisk);
           setGiftboost(data.gift);
           setLang(data.lang);
+          setSource(data.source);
         })
         .catch(error => console.error(error))
     };
@@ -39,7 +42,7 @@ export const AlertPanel = (props) => {
         }
         let settingBody = {"twitch": "tetristhegrandmaster3"};
         settingBody[key] = value;
-        await fetch('https://m3ntru-tts.herokuapp.com/api/alert/',{method: "POST", headers, body: JSON.stringify(settingBody)})
+        await fetch('https://m3ntru-api.vercel.app/api/alert/',{method: "POST", headers, body: JSON.stringify(settingBody)})
         .then(response=>{
           return response.json();
         })
@@ -50,7 +53,6 @@ export const AlertPanel = (props) => {
     };
     
     const handleCommonClick = name => event => {
-        const { client, channel } = props;
         client.say(channel, name);
     };
 
@@ -60,7 +62,6 @@ export const AlertPanel = (props) => {
     // };
 
     const handleRecallClick = name => event => {
-        const { client, channel } = props;
         if (id) {
             if (name == "!cheer") {
                 if (text) {
@@ -90,7 +91,6 @@ export const AlertPanel = (props) => {
     };
 
     const handleSwitchChange = (value) => event => {
-        const { client, channel } = props;
         const status = (event.target.checked)? "on" : "off";
         switch(value)
         {
@@ -113,10 +113,17 @@ export const AlertPanel = (props) => {
     };
 
     const handleLangChange = () => event =>  {
-        const { client, channel } = props;
         setLang(event.target.value);
         client.say(channel, "!lang " + event.target.value);
         setSetting("lang", event.target.value);
+    } 
+
+    const handleSourceChange = () => event =>  {
+        const result = (event.target.value == "Chat")
+        const status = (result)? "on" : "off";
+        setSource(result);
+        client.say(channel, "!source " + status);
+        setSetting("source", result);
     } 
 
     return (
@@ -178,10 +185,18 @@ export const AlertPanel = (props) => {
                                     </Container>
                                 </Grid> 
                                 <Grid item xs={12}>
-                                    <Container className="grid-container" >
-                                        <Typography variant='subtitle2' component='p' className='block-title'>
-                                            Recall
-                                        </Typography>
+                                <Container className="grid-container" >
+                                    <Typography variant='subtitle2' component='p' className='block-title'>
+                                        Recall
+                                    </Typography>
+                                    <Typography variant='subtitle2' component='p' className='block-title'>
+                                        General <Switch checked={recall} onChange={()=>{setRecall(!recall)}}/> Elevated
+                                    </Typography>
+                                    {(recall)?
+                                    <div style={{width: '100%'}}>
+                                    </div>
+                                    :
+                                    <div style={{width: '100%'}}>
                                         <TextField component={Paper}
                                             label="Twitch id"
                                             variant='outlined'
@@ -220,6 +235,8 @@ export const AlertPanel = (props) => {
                                                 onClick={handleRecallClick("!cheer")}
                                             >Cheer</Button>
                                         </div>
+                                    </div>
+                                    }
                                     </Container>
                                 </Grid>   
                             </Grid>
@@ -264,10 +281,26 @@ export const AlertPanel = (props) => {
                                             </FormControl>
                                             </Grid>
                                         </Grid>
+                                        <Grid container spacing={2} className="label-switch" style={{margin: 'auto'}}>
+                                            <Grid style={{margin: 'auto'}} className="block-title" item xs={6}>
+                                                source
+                                            </Grid>
+                                            <Grid item xs={6}>
+                                            <FormControl>
+                                                <Select
+                                                    labelId="demo-simple-select-label"
+                                                    style={{backgroundColor: "#999999", padding: "1px 8px"}}
+                                                    value={(source)?"Chat":"Streamlabs"}
+                                                    onChange={handleSourceChange()}
+                                                >
+                                                    <MenuItem key={false} value={"Streamlabs"}>SL</MenuItem>
+                                                    <MenuItem key={true} value={"Chat"}>Chat</MenuItem>
+                                                </Select>
+                                            </FormControl>
+                                            </Grid>
+                                        </Grid>
                                     </Container>
                                 </Grid>
-                                
-                                
                                 <Grid item xs={12}>
                                     <Container className="grid-container"  >
                                         <Switch

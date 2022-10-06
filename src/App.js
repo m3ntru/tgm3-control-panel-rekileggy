@@ -13,7 +13,7 @@ import './App.css';
 
 const paramsId = new URLSearchParams(window.location.search).get("id");
 const paramsToken = new URLSearchParams(window.location.search).get("token");
-const channel = "zatd93"
+const channel = "tgm3backend"
 const client = new tmi.Client({
   options: { debug: true, messagesLogLevel: "info" },
   connection: {
@@ -67,26 +67,31 @@ const App = () => {
         :
         <SoundFXPanel client={client} channel={channel} />
       }
-      <Tooltip title="停止當前音效" placement="left">
-        <Fab aria-label="alert" style={{ position: "fixed", right: "16px", bottom: "256px" }} onClick={handleClick("!stop")}>
-          <StopIcon />
-        </Fab>
-      </Tooltip>
-      <Tooltip title="我ㄉ最愛(開發中)" placement="left">
-        <Fab aria-label="alert" style={{ position: "fixed", right: "16px", bottom: "176px" }} onClick={handleClick("!stop")}>
-          <FavoriteIcon />
-        </Fab>
-      </Tooltip>
-      <Tooltip title="音效庫" placement="left">
-        <Fab aria-label="alert" style={{ position: "fixed", right: "16px", bottom: "96px" }} onClick={() => setPage(0)}>
-          <LibraryMusicIcon />
-        </Fab>
-      </Tooltip>
-      <Tooltip title="通知測試" placement="left">
-        <Fab aria-label="soundFX" style={{ position: "fixed", right: "16px", bottom: "16px" }} onClick={() => setPage(1)}>
-          <SettingsIcon />
-        </Fab>
-      </Tooltip>
+      {(page) ?
+        <Tooltip title="音效庫" placement="left">
+          <Fab aria-label="alert" style={{ position: "fixed", right: "16px", bottom: "16px" }} onClick={() => setPage(0)}>
+            <LibraryMusicIcon />
+          </Fab>
+        </Tooltip>
+        :
+        <div>
+          <Tooltip title="停止當前音效" placement="left">
+            <Fab aria-label="alert" style={{ position: "fixed", right: "16px", bottom: "96px" }} onClick={handleClick("!stop")}>
+              <StopIcon />
+            </Fab>
+          </Tooltip>
+          {/* <Tooltip title="我ㄉ最愛(開發中)" placement="left">
+            <Fab aria-label="alert" style={{ position: "fixed", right: "16px", bottom: "96px" }} onClick={handleClick("!stop")}>
+              <FavoriteIcon />
+            </Fab>
+          </Tooltip> */}
+          <Tooltip title="通知設定" placement="left">
+            <Fab aria-label="soundFX" style={{ position: "fixed", right: "16px", bottom: "16px" }} onClick={() => setPage(1)}>
+              <SettingsIcon />
+            </Fab>
+          </Tooltip>
+        </div>
+      }
     </MuiThemeProvider>
   );
 }
