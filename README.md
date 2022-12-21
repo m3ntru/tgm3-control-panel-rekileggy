@@ -6,6 +6,11 @@
 
 ## 版本
 
+### version 0.5.0
+- add tailwind
+- 新增 Elevated Message
+- 新增音效
+
 ### version 0.4.1
 - 新增音效
 - 調整版面

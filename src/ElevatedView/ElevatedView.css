@@ -1,0 +1,84 @@
+.bg {
+  display: flex !important;
+  width: 100% !important;
+  height: 100% !important;
+  flex-direction: column !important;
+  font-size: 24px;
+}
+
+.name-block {
+  display: flex !important;
+  align-items: center;
+  flex-direction: row !important;
+  padding: 0.2rem !important;
+}
+
+.kUvjun {
+  display: inline !important;
+  margin-bottom: 0.15rem;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+
+.chat-badge {
+  height: 24px;
+  vertical-align: middle;
+}
+
+.user {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  display: flex !important;
+  alignitems: center;
+  font-weight: 600 !important;
+}
+
+.price {
+  margin-right: 0.5rem !important;
+  color: #000000;
+  display: inline-block;
+  position: relative;
+  line-height: initial;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 1000px;
+  padding: 0.15rem 0.4em;
+  font-size: 75%;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+}
+
+.msg {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.25rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  text-align: left;
+  display: flex;
+}
+
+.msg img {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.msg-big {
+  font-size: 24px;
+}
+
+.msg-big img {
+  height: 24px;
+}
+
+.msg-small {
+  font-size: 24px;
+}
+
+.msg-small img {
+  height: 24px;
+}

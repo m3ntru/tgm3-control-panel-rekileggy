@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Grid, Typography, Button, TextField, Paper, Tooltip, Switch, FormControl, Select, MenuItem } from '@material-ui/core/';
+import { Container, Grid, Typography, Button, TextField, Paper, Radio, RadioGroup, FormControlLabel, Switch, FormControl, Select, MenuItem } from '@material-ui/core/';
 import BT1 from './img/b1.png'
 import ImgList from './ImgList';
 import BasiliskImg from './img/basilisktime.png';
 import GiftImg from './img/gift.png';
+import Elevated from './Elevated';
 import './App.css';
 
 export const AlertPanel = (props) => {
     const [id, setId] = useState("");
     const [text, setText] = useState("");
+    const [price, setPrice] = useState("150");
     const [reload, setReload] = useState(true);
     const [basilisk, setBasilisk] = useState(false);
     const [giftboost, setGiftboost] = useState(false);
@@ -56,6 +58,10 @@ export const AlertPanel = (props) => {
         client.say(channel, name);
     };
 
+    const handleChange = (event) => {
+        setPrice(event.target.value);
+    };
+
     // const handleClick = name => event => {
     //     const { client, channel } = props;
     //     client.say(channel, name);
@@ -80,6 +86,31 @@ export const AlertPanel = (props) => {
         }
     };
 
+    const handleElevatedClick = name => event => {
+        if (id && text) {
+            const paramsElevated = new URLSearchParams(window.location.search).get("elevated");
+            const data = {
+                twitch: "#tetristhegrandmaster3",
+                emotes: null,
+                username: id,
+                color: null,
+                badges: null,
+                message: text,
+                price: price + "00",
+            };
+            fetch(
+                `https://m3ntru-api.vercel.app/api/elevated/`, {
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json',
+                    'Authorization': `Bearer ${paramsElevated}`, // notice the Bearer before your token
+                },
+                body: JSON.stringify(data)
+                }
+            );
+        }
+    };
+
     const handleIdChange = () => event => {
         var msg = event.target.value;
         setId(msg);
@@ -88,7 +119,7 @@ export const AlertPanel = (props) => {
     const handleTextChange = () => event => {
         var msg = event.target.value;
         setText(msg);
-    };
+    }; 
 
     const handleSwitchChange = (value) => event => {
         const status = (event.target.checked)? "on" : "off";
@@ -190,13 +221,24 @@ export const AlertPanel = (props) => {
                                         Recall
                                     </Typography>
                                     <Typography variant='subtitle2' component='p' className='block-title'>
-                                        General <Switch checked={recall} onChange={()=>{setRecall(!recall)}}/> Elevated
+                                        Manual <Switch checked={recall} onChange={()=>{setRecall(!recall)}}/> Elevated
                                     </Typography>
                                     {(recall)?
                                     <div style={{width: '100%'}}>
+                                        <Elevated client={client} channel={channel}/>
+                                        {/* <div className="text-4xl text-white">SSS</div> */}
                                     </div>
                                     :
                                     <div style={{width: '100%'}}>
+                                        <div className='flex justify-center'>
+                                            <RadioGroup row aria-label="gender" name={"Price"} defaultValue={"150"} onChange={handleChange}>
+                                                <FormControlLabel value={"150"} control={<Radio />} label={"150"} className='block-title' />
+                                                <FormControlLabel value={"300"} control={<Radio />} label={"300"} className='block-title' />
+                                                <FormControlLabel value={"750"} control={<Radio />} label={"750"} className='block-title' />
+                                                <FormControlLabel value={"1500"} control={<Radio />} label={"1500"} className='block-title' />
+                                                <FormControlLabel value={"3000"} control={<Radio />} label={"3000"} className='block-title' />
+                                            </RadioGroup>
+                                        </div>
                                         <TextField component={Paper}
                                             label="Twitch id"
                                             variant='outlined'
@@ -204,12 +246,12 @@ export const AlertPanel = (props) => {
                                             size="small"
                                             style={{ width: '85%', margin: '10px 0px' }}
                                             onChange={handleIdChange()}
-                                        />
+                                        />                                      
                                         <TextField component={Paper}
                                             multiline
                                             label="Text"
                                             variant='outlined'
-                                            rows={7}
+                                            minRows={7}
                                             id="outlined-size-normal"
                                             size="small"
                                             style={{ width: '85%', margin: '5px 0px' }}
@@ -234,6 +276,12 @@ export const AlertPanel = (props) => {
                                                 style={{ margin: '0px 10px' }}
                                                 onClick={handleRecallClick("!cheer")}
                                             >Cheer</Button>
+                                            <Button
+                                                variant='contained'
+                                                color="primary"
+                                                style={{ margin: '0px 10px' }}
+                                                onClick={handleElevatedClick()}
+                                            >Elevated</Button>
                                         </div>
                                     </div>
                                     }
@@ -246,7 +294,7 @@ export const AlertPanel = (props) => {
                                 <Grid item xs={12}>
                                     <Container className="grid-container"  >
                                         <Grid container spacing={2} className="label-switch" style={{margin: 'auto'}}>
-                                            <Grid style={{margin: 'auto'}} item xs={6}>
+                                            <Grid className='flex justify-center' style={{margin: 'auto'}} item xs={6}>
                                                 <img title="Basilisk" src={BasiliskImg} alt='logo' style={{height: "40px"}} />
                                             </Grid>
                                             <Grid item xs={6}>
@@ -254,8 +302,8 @@ export const AlertPanel = (props) => {
                                             </Grid>
                                         </Grid>
                                         <Grid container spacing={2} className="label-switch" style={{margin: 'auto'}}>
-                                            <Grid style={{margin: 'auto'}} item xs={6}>
-                                                <img title="Gift Boost" src={GiftImg} alt='logo' style={{height: "40px"}} />
+                                            <Grid className='flex justify-center' style={{margin: 'auto'}} item xs={6}>
+                                                <img title="Gift Boost" src={GiftImg} alt='logo' style={{height: "40px"}}  />
                                             </Grid>
                                             <Grid item xs={6}>
                                                 <Switch checked={giftboost} onChange={handleSwitchChange('giftboost')}/>

@@ -6,6 +6,7 @@ import tmi from 'tmi.js'
 import SoundFXPanel from './SoundFXPanel';
 import AlertPanel from './AlertPanel';
 import StopIcon from '@material-ui/icons/Stop';
+import CancelPresentationIcon from '@material-ui/icons/CancelPresentation';
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
 import SettingsIcon from '@material-ui/icons/Settings';
 import FavoriteIcon from '@material-ui/icons/Favorite';
@@ -68,11 +69,18 @@ const App = () => {
         <SoundFXPanel client={client} channel={channel} />
       }
       {(page) ?
-        <Tooltip title="音效庫" placement="left">
-          <Fab aria-label="alert" style={{ position: "fixed", right: "16px", bottom: "16px" }} onClick={() => setPage(0)}>
-            <LibraryMusicIcon />
-          </Fab>
-        </Tooltip>
+        <div>
+          <Tooltip title="停止當前EC" placement="left">
+            <Fab aria-label="alert" style={{ position: "fixed", right: "16px", bottom: "96px" }} onClick={handleClick("!elestop")}>
+              <CancelPresentationIcon />
+            </Fab>
+          </Tooltip>
+          <Tooltip title="音效庫" placement="left">
+            <Fab aria-label="alert" style={{ position: "fixed", right: "16px", bottom: "16px" }} onClick={() => setPage(0)}>
+              <LibraryMusicIcon />
+            </Fab>
+          </Tooltip>
+        </div>
         :
         <div>
           <Tooltip title="停止當前音效" placement="left">
