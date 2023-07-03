@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tgm3-control-panel-rekileggy/static/css/main.f7be2433.css",
-    "main.js": "/tgm3-control-panel-rekileggy/static/js/main.831b8596.js",
+    "main.js": "/tgm3-control-panel-rekileggy/static/js/main.73025e82.js",
     "static/js/787.65482dc4.chunk.js": "/tgm3-control-panel-rekileggy/static/js/787.65482dc4.chunk.js",
     "static/media/subFast.gif": "/tgm3-control-panel-rekileggy/static/media/subFast.38c0efecc9599d404974.gif",
     "static/media/subRare.gif": "/tgm3-control-panel-rekileggy/static/media/subRare.5310be54e75335774034.gif",
@@ -12,11 +12,10 @@
     "static/media/cheer.gif": "/tgm3-control-panel-rekileggy/static/media/cheer.1175cbeea109b2747a46.gif",
     "static/media/basilisktime.png": "/tgm3-control-panel-rekileggy/static/media/basilisktime.9e3385625f10f91a1d8e.png",
     "static/media/futsukushii.png": "/tgm3-control-panel-rekileggy/static/media/futsukushii.adf02566a31244da7c81.png",
-    "static/media/ha.png": "/tgm3-control-panel-rekileggy/static/media/ha.06052ef48d43a48e8f10.png",
     "static/media/destroy.png": "/tgm3-control-panel-rekileggy/static/media/destroy.5440953a32256a261fff.png",
     "static/media/ding.png": "/tgm3-control-panel-rekileggy/static/media/ding.16b01289f898c62fb09a.png",
-    "static/media/ringu.png": "/tgm3-control-panel-rekileggy/static/media/ringu.0e2122a9642346e8080f.png",
     "static/media/yesyesyes.jpg": "/tgm3-control-panel-rekileggy/static/media/yesyesyes.f987e652875e584aa4b6.jpg",
+    "static/media/diehardman.jpg": "/tgm3-control-panel-rekileggy/static/media/diehardman.81f2759dc481df9f12f8.jpg",
     "static/media/wryyy.jpg": "/tgm3-control-panel-rekileggy/static/media/wryyy.54e2beb3950592753ae5.jpg",
     "static/media/objectione.png": "/tgm3-control-panel-rekileggy/static/media/objectione.3f09bbbf396584ed2b79.png",
     "static/media/holditc.png": "/tgm3-control-panel-rekileggy/static/media/holditc.eb661fb5bfc157a7347a.png",
@@ -38,8 +37,9 @@
     "static/media/bakusatsu.png": "/tgm3-control-panel-rekileggy/static/media/bakusatsu.eb6fbfe9786504c63087.png",
     "static/media/zawarudo.jpg": "/tgm3-control-panel-rekileggy/static/media/zawarudo.4aea6e081e27fb863d34.jpg",
     "static/media/hanase.jpg": "/tgm3-control-panel-rekileggy/static/media/hanase.21e701439c0e7cf69d8a.jpg",
-    "static/media/diehardman.jpg": "/tgm3-control-panel-rekileggy/static/media/diehardman.8ffb902d6813a33692e2.jpg",
     "static/media/goodbyejojo.jpg": "/tgm3-control-panel-rekileggy/static/media/goodbyejojo.487058eb89c93b1ed49c.jpg",
+    "static/media/ha.png": "/tgm3-control-panel-rekileggy/static/media/ha.a3f3ab7ac175b9d5b9cf.png",
+    "static/media/ringu.png": "/tgm3-control-panel-rekileggy/static/media/ringu.d8229996704eafd67402.png",
     "static/media/donate.jpg": "/tgm3-control-panel-rekileggy/static/media/donate.827c3fabb11f79846db6.jpg",
     "static/media/verynicecaesarchan.jpg": "/tgm3-control-panel-rekileggy/static/media/verynicecaesarchan.678b942e5cc42d8600f4.jpg",
     "static/media/hell2you.jpg": "/tgm3-control-panel-rekileggy/static/media/hell2you.97055aaceddfeed658fd.jpg",
@@ -61,11 +61,11 @@
     "static/media/b0.png": "/tgm3-control-panel-rekileggy/static/media/b0.a03c04b9442adafed5db.png",
     "index.html": "/tgm3-control-panel-rekileggy/index.html",
     "main.f7be2433.css.map": "/tgm3-control-panel-rekileggy/static/css/main.f7be2433.css.map",
-    "main.831b8596.js.map": "/tgm3-control-panel-rekileggy/static/js/main.831b8596.js.map",
+    "main.73025e82.js.map": "/tgm3-control-panel-rekileggy/static/js/main.73025e82.js.map",
     "787.65482dc4.chunk.js.map": "/tgm3-control-panel-rekileggy/static/js/787.65482dc4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f7be2433.css",
-    "static/js/main.831b8596.js"
+    "static/js/main.73025e82.js"
   ]
 }
