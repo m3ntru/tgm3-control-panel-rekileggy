@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tgm3-control-panel-rekileggy/static/css/main.f7be2433.css",
-    "main.js": "/tgm3-control-panel-rekileggy/static/js/main.73025e82.js",
+    "main.js": "/tgm3-control-panel-rekileggy/static/js/main.5373d61b.js",
     "static/js/787.65482dc4.chunk.js": "/tgm3-control-panel-rekileggy/static/js/787.65482dc4.chunk.js",
     "static/media/subFast.gif": "/tgm3-control-panel-rekileggy/static/media/subFast.38c0efecc9599d404974.gif",
     "static/media/subRare.gif": "/tgm3-control-panel-rekileggy/static/media/subRare.5310be54e75335774034.gif",
@@ -61,11 +61,11 @@
     "static/media/b0.png": "/tgm3-control-panel-rekileggy/static/media/b0.a03c04b9442adafed5db.png",
     "index.html": "/tgm3-control-panel-rekileggy/index.html",
     "main.f7be2433.css.map": "/tgm3-control-panel-rekileggy/static/css/main.f7be2433.css.map",
-    "main.73025e82.js.map": "/tgm3-control-panel-rekileggy/static/js/main.73025e82.js.map",
+    "main.5373d61b.js.map": "/tgm3-control-panel-rekileggy/static/js/main.5373d61b.js.map",
     "787.65482dc4.chunk.js.map": "/tgm3-control-panel-rekileggy/static/js/787.65482dc4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f7be2433.css",
-    "static/js/main.73025e82.js"
+    "static/js/main.5373d61b.js"
   ]
 }
