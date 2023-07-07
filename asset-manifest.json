@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tgm3-control-panel-rekileggy/static/css/main.f7be2433.css",
-    "main.js": "/tgm3-control-panel-rekileggy/static/js/main.03b030d1.js",
+    "main.js": "/tgm3-control-panel-rekileggy/static/js/main.e8c551c5.js",
     "static/js/787.65482dc4.chunk.js": "/tgm3-control-panel-rekileggy/static/js/787.65482dc4.chunk.js",
     "static/media/subFast.gif": "/tgm3-control-panel-rekileggy/static/media/subFast.38c0efecc9599d404974.gif",
     "static/media/subRare.gif": "/tgm3-control-panel-rekileggy/static/media/subRare.5310be54e75335774034.gif",
@@ -57,17 +57,18 @@
     "static/media/speaker1.jpg": "/tgm3-control-panel-rekileggy/static/media/speaker1.fe1d3ca41900cec765dd.jpg",
     "static/media/lpcountdown.jpg": "/tgm3-control-panel-rekileggy/static/media/lpcountdown.b961ef0cc87b7c20194e.jpg",
     "static/media/bonkhd.png": "/tgm3-control-panel-rekileggy/static/media/bonkhd.c8f9bb91e8e50d7af5ea.png",
+    "static/media/doraemon.png": "/tgm3-control-panel-rekileggy/static/media/doraemon.1bb881461b1cc3ec87e1.png",
     "static/media/speaker2.jpg": "/tgm3-control-panel-rekileggy/static/media/speaker2.6d380a9c51b426130438.jpg",
     "static/media/b1.png": "/tgm3-control-panel-rekileggy/static/media/b1.36add1c0d7e78a686c07.png",
     "static/media/konodioda.jpg": "/tgm3-control-panel-rekileggy/static/media/konodioda.9ed13d763673958397f2.jpg",
     "static/media/b0.png": "/tgm3-control-panel-rekileggy/static/media/b0.a03c04b9442adafed5db.png",
     "index.html": "/tgm3-control-panel-rekileggy/index.html",
     "main.f7be2433.css.map": "/tgm3-control-panel-rekileggy/static/css/main.f7be2433.css.map",
-    "main.03b030d1.js.map": "/tgm3-control-panel-rekileggy/static/js/main.03b030d1.js.map",
+    "main.e8c551c5.js.map": "/tgm3-control-panel-rekileggy/static/js/main.e8c551c5.js.map",
     "787.65482dc4.chunk.js.map": "/tgm3-control-panel-rekileggy/static/js/787.65482dc4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f7be2433.css",
-    "static/js/main.03b030d1.js"
+    "static/js/main.e8c551c5.js"
   ]
 }
